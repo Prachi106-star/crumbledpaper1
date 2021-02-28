@@ -10,9 +10,16 @@ class Ground{
         
     }
     display(){
-        fill("yellow");
+        
         var pos = this.body.position ;
-        rectMode(CENTER);
-        rect(pos.x,pos.y,this.width,this.height);
+        push()
+			translate(pos.x, pos.y);
+			rectMode(CENTER)
+            strokeWeight(4);
+            stroke("green")
+			fill("red")
+			rect(0,0,this.width, this.height);
+            pop();
+			
     }
 }
